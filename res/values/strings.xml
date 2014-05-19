@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppConcept</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_button">Menu</string>
+    <string name="faq_button">FAQ</string>
+    <string name="tv_text">What are you going to do, when they come for you?</string>
+    <string name="menu_toast">Going to Menu</string>
+    <string name="faq_toast">Going to FAQ</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_fullscreen">FAQ</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">The Jelli Deli app is created by C3 Interns (C3POs). With love. ♥ </string>
+    <string name="button">HAPPY? </string>
+    <string name="ImagebuttonCD">Image button.</string>
+    <string name="order_preview">Tap a sandwich to add to order.</string>
+    <string name="title_activity_receipt">ReceiptActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="finish_button">Confirm Order!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_bluetooth">BluetoothActivity</string>
+
+</resources>

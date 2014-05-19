@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:background="@drawable/androidbg"
+    tools:context="C3.appconcept.MainActivity"
+    tools:ignore="MergeRootFrame" >
+  	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+		<RelativeLayout
+		    android:layout_width="143dp"
+		    android:layout_height="143dp">
+		        <ImageView
+		            android:id="@+id/samTL"
+		            android:layout_width="143dp"
+		            android:layout_height="143dp"
+		            android:layout_marginRight="5dp"
+		            android:clickable="true"
+		            android:contentDescription="@string/dummy_content"
+		            android:src="@drawable/blank" />
+		        <TextView
+		            android:id="@+id/samTLtext"
+		            android:textSize="10dp"
+		            android:padding="10dp"
+		            android:paddingRight="20dp"
+		            android:layout_width ="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/samTL"
+		            android:layout_alignLeft="@+id/samTL"
+		        	android:layout_below="@id/samTL"
+		        	android:gravity="left"
+		        	android:layout_marginTop="5dp" />
+		</RelativeLayout>
+        <RelativeLayout
+		    android:layout_width="143dp"
+		    android:layout_height="143dp">
+		        <ImageView
+		            android:id="@+id/samTR"
+		            android:layout_width="143dp"
+		            android:layout_height="143dp"
+		            android:layout_marginRight="5dp"
+		            android:clickable="true"
+		            android:contentDescription="@string/dummy_content"
+		            android:src="@drawable/blank" />
+		        <TextView
+		            android:id="@+id/samTRtext"
+		            android:textSize="10dp"
+		            android:padding="10dp"
+		            android:paddingRight="20dp"
+		            android:layout_width ="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/samTR"
+		            android:layout_alignLeft="@+id/samTR"
+		        	android:layout_below="@id/samTR"
+		        	android:gravity="left"
+		        	android:layout_marginTop="5dp" />
+		</RelativeLayout>
+
+    </LinearLayout>
+  	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+		    android:layout_width="143dp"
+		    android:layout_height="143dp">
+		        <ImageView
+		            android:id="@+id/samBL"
+		            android:layout_width="143dp"
+		            android:layout_height="143dp"
+		            android:layout_marginRight="5dp"
+		            android:clickable="true"
+		            android:contentDescription="@string/dummy_content"
+		            android:src="@drawable/blank" />
+		        <TextView
+		            android:id="@+id/samBLtext"
+		            android:textSize="10dp"
+		            android:padding="10dp"
+		            android:paddingRight="20dp"
+		            android:layout_width ="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/samBL"
+		            android:layout_alignLeft="@+id/samBL"
+		        	android:layout_below="@id/samBL"
+		        	android:gravity="left"
+		        	android:layout_marginTop="5dp" />
+		</RelativeLayout>
+        
+        <RelativeLayout
+		    android:layout_width="143dp"
+		    android:layout_height="143dp">
+		        <ImageView
+		            android:id="@+id/samBR"
+		            android:layout_width="143dp"
+		            android:layout_height="143dp"
+		            android:layout_marginRight="5dp"
+		            android:clickable="true"
+		            android:contentDescription="@string/dummy_content"
+		            android:src="@drawable/blank" />
+		        <TextView
+		            android:id="@+id/samBRtext"
+		            android:textSize="10dp"
+		            android:padding="10dp"
+		            android:paddingRight="20dp"
+		            android:layout_width ="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignTop="@+id/samBR"
+		            android:layout_alignLeft="@+id/samBR"
+		        	android:layout_below="@id/samBR"
+		        	android:gravity="left"
+		        	android:layout_marginTop="5dp" />
+		</RelativeLayout>
+    </LinearLayout>
+
+  	<LinearLayout
+  	    android:layout_gravity="bottom"
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:gravity="center"
+  	    android:orientation="vertical" >
+        <TextView
+       	android:id="@+id/orderDesc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+		android:background="#8FFF"
+        android:padding="5dp"
+        android:layout_margin="15dp"
+        android:text="@string/order_preview" />
+        <View 
+        	android:layout_width="match_parent"
+            android:layout_height="5dp" />
+        <ImageView
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/dummy_content"
+            android:src="@drawable/orderbutton" />
+  	</LinearLayout>
+    
+</LinearLayout>

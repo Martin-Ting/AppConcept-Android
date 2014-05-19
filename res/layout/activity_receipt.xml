@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:background="@drawable/androidbg"
+    tools:context="C3.appconcept.ReceiptActivity"
+    tools:ignore="MergeRootFrame" >
+    <Button
+        android:id="@+id/finish_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/finish_button" />
+    <TextView
+       	android:id="@+id/confirmDesc01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:background="#8FFF"
+        android:padding="5dp" />
+    <View android:layout_height="3dp"
+          android:layout_width="match_parent"/>
+    <TextView
+       	android:id="@+id/confirmDesc02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:background="#8FFF"
+        android:padding="5dp" />
+    <View android:layout_height="3dp"
+          android:layout_width="match_parent"/>
+    <TextView
+       	android:id="@+id/confirmDesc03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:background="#8FFF"
+        android:padding="5dp" />
+    <View android:layout_height="3dp"
+          android:layout_width="match_parent"/>
+    <TextView
+       	android:id="@+id/confirmDesc04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:background="#8FFF"
+        android:padding="5dp" />
+    <View android:layout_height="3dp"
+          android:layout_width="match_parent"/>
+    <TextView
+       	android:id="@+id/orderTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:background="#8FFF"
+        android:padding="5dp" />
+</LinearLayout>
