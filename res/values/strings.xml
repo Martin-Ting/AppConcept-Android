@@ -20,5 +20,6 @@
     <string name="finish_button">Confirm Order!</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_bluetooth">BluetoothActivity</string>
-
+	<string name="bluetooth_button">Bluetooth</string>
+	<string name="BT_toast">Going to Bluetooth activity</string>
 </resources>

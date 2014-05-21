@@ -1,27 +1,83 @@
 package C3.appconcept;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import java.util.Set;
+
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.TextView;
 
 public class BluetoothActivity extends ActionBarActivity {
-
+	private BluetoothAdapter mBluetoothAdapter; 			//BluetoothAdapter object represents actual device bluetooth module.
+	private static final int REQUEST_ENABLE_BT = 1;
+	private Set<BluetoothDevice> pairedDevices;
+	
+	TextView BTDesc;
+	//scanLE device
+	/*
+	private boolean mScanning;
+	private Handler mHandler;
+	private static final long SCAN_PERIOD = 1000;
+	private void scanLeDevice(final boolean enable){
+		
+		if(enable){
+			mHandler.postDelayed(new Runnable(){
+				@Override
+				public void run(){
+					mScanning = false;
+					mBluetoothAdapter.stopLeScan(mLeScanCallback);
+				}
+			}, SCAN_PERIOD);
+			
+			mScanning = true;
+			mBluetoothAdapter.startLeScan(mLeScanCallback);
+		} else {
+			mScanning = false;
+			mBluetoothAdapter.stopLeScan(mLeScanCallback);
+		}
+	}*/
+	private void bluetoothMethod(){
+		
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_bluetooth);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+		
+		Log.d("MT", "Bluetooth activity started -----------");
+		Log.d("MT", "getting bluetooth adapter instance.");
+		final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
+		mBluetoothAdapter = bluetoothManager.getAdapter();
+		
+		BTDesc = (TextView) findViewById(R.id.BTDesc);
+		// Ensures Bluetooth is available on the device and it is enabled. If not,
+		// displays a dialog requesting user permission to enable Bluetooth.
+		boolean a = mBluetoothAdapter == null;
+		boolean b = !mBluetoothAdapter.isEnabled ();
+		if (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled()) {
+			BTDesc.setText("BT is enabled");
+			Log.d("MT", "Bluetooth is enabled.");
+		    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+		    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+		    
+		    pairedDevices = mBluetoothAdapter.getBondedDevices();
 		}
+		else
+		{
+			if(mBluetoothAdapter == null) Log.d("MT", "mBluetoothAdapter is NULL");
+			if(!mBluetoothAdapter.isEnabled()) Log.d("MT", "Bluetooth Adapter not enabled.");
+			BTDesc.setText("BT is disabled");
+			Log.d("MT", "Bluetooth is not enabled or not available.");
+		}
+
 	}
 
 	@Override
@@ -44,21 +100,6 @@ public class BluetoothActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
 
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_bluetooth,
-					container, false);
-			return rootView;
-		}
-	}
 
 }

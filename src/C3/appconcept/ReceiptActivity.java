@@ -31,8 +31,8 @@ public class ReceiptActivity extends ActionBarActivity {
 	private TextView confDescTL, confDescTR, confDescBL, confDescBR, orderTotal;
 	private Button finishButton;
 	
-	private final String apiURL = "http://138.23.221.170:8080/Jelli_deli/jaxrs/order";
-	private final String targetDomain = "138.23.221.170"; // :8080?
+	private final String apiURL = "http://138.23.220.204:8080/Jelli_deli/jaxrs/order";
+	private final String targetDomain = "138.23.220.204"; // :8080? No.
 	private String APIresponse = null;
 	/*
 	 * This api package should be called by using apiCall(generateXML( ... ))
@@ -59,8 +59,6 @@ public class ReceiptActivity extends ActionBarActivity {
 		Log.d("MT", "Creating post connection...");
 		HttpPost httpPost = new HttpPost(apiURL);
 		Log.d("MT", "Adding headers.");
-		//httpPost.addHeader("Accept", "text/xml");
-		//httpPost.addHeader("Content-Type", "application/xml");
 		
 		Log.d("MT", "Writing to host...");
 		try{

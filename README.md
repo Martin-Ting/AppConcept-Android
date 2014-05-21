@@ -1,8 +1,7 @@
+Project created by: Martin Ting -- CHASS College computing
 
-AppConcept-Android
-CHASS College computing
-Martin Ting
-=======================
+                           AppConcept-Android
+                         ======================
 
 > Overview
 =============
@@ -10,8 +9,6 @@ This project is used at CHASS College Computing for testing Android app capabili
 functions, and features for implementing future systems. This app is designed by the 
 Interns of C3 and created by Martin Ting. This app will be available for three 
 platforms: Android, iOS, and Windows RT.
-
-
 
 > Description
 =============
@@ -23,4 +20,4 @@ and retrieve data to/from a MySQL database using Hibernate ORM.
 
 > Versions
 ============
-1.0: Menu request and online ordering is working. 
+1.0: App GUI and web service functionality implemented.

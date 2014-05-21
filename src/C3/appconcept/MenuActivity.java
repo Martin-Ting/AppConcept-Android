@@ -31,7 +31,7 @@ import android.widget.TextView;
 
 public class MenuActivity extends ActionBarActivity {
 	private String APIresponse = null;
-	private String apiURL = "http://138.23.221.170:8080/Jelli_deli/jaxrs/menu";
+	private String apiURL = "http://138.23.220.204:8080/Jelli_deli/jaxrs/menu";
 	
 	private ImageView mSamTL;
 	private ImageView mSamTR;
