@@ -8,6 +8,13 @@ functions, and features for implementing future systems. This app is designed by
 Interns of C3 and created by Martin Ting. This app will be available for three 
 platforms: Android, iOS, and Windows RT.
 
+Update 12/8/2014
+=============
+The architecture proposed for this project was presented at the Southern California 
+Conference for Undergraduate Research. We presented our research entitled "A new 
+paradigm in mobile computing."
+http://apps.fullerton.edu/sccur_csuf/
+
 Description
 =============
 The system created to test android app capabilities is called Jelli Deli. This system 
